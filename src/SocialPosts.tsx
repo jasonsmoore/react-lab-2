@@ -32,7 +32,7 @@ function SocialPosts() {
             </div>
             <div className='postBox'>
                 <p className='posted'>
-                    {postList.length <= 0 && 'No thoughts... head empty....'}
+                    {postList.length <= 0 && <div className='noThought'>No thoughts... head empty....</div>}
                     {postList.map( (post, i) => {
                         return (
                             <PostInList 
