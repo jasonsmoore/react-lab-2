@@ -2,7 +2,7 @@ import Post from "./Post";
 
 interface PostProp {
     post : Post,
-    onDelete: Function
+    onDelete: () => void
 }
 
 function PostInList( { post, onDelete } : PostProp ) {
@@ -11,7 +11,7 @@ function PostInList( { post, onDelete } : PostProp ) {
             <div className='inList'>
                 <h2>{post.title}</h2>
                 <p>{post.thought}</p>
-                <button className='trash' onClick={onDelete()}>Delete</button>
+                <button className='trash' onClick={onDelete}>Delete</button>
             </div>
         </div>
     )
